@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,14 +16,17 @@
 <header class="navbar">
     <div class="container">
         <div class="nav-content">
-            <div class="logo">MiAdelanto</div>
+            <div class="logo">
+                <img src="logo.png" alt="MiAdelanto Logo" class="logo-img">
+                <span class="logo-text">miadelanto</span>
+            </div>
             <nav class="nav-links">
                 <a href="#funciona">Cómo funciona</a>
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle">Beneficios <span class="arrow">▼</span></a>
                     <div class="dropdown-menu">
-                        <a href="#empresas" class="dropdown-item">Empresas</a>
-                        <a href="#clientes" class="dropdown-item">Clientes</a>
+                        <a href="#empresas" class="dropdown-item">Empresa</a>
+                        <a href="#clientes" class="dropdown-item">Empleado</a>
                     </div>
                 </div>
                 <a href="#empleados">Contacto</a>
@@ -37,6 +41,16 @@
 
 <!-- HERO SECTION -->
 <section class="hero">
+    <svg class="wave-header" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#00a8e8;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <path d="M0,40 Q300,15 600,40 T1200,40 L1200,0 L0,0 Z" fill="url(#waveGradient)"/>
+    </svg>
     <div class="container">
         <div class="hero-grid">
             <div class="hero-text fade-in-up">
@@ -212,12 +226,6 @@
                 <h3>Disponible 24/7</h3>
                 <p>La app funciona todo el día, todos los días. Pedí cuando lo necesites.</p>
             </div>
-            
-            <div class="employee-benefit-card scale-in" style="animation-delay: 0.6s;">
-                <div class="benefit-number">7</div>
-                <h3>Sin afectar tu sueldo total</h3>
-                <p>Recibís parte de tu salario antes, y el resto al final del mes como siempre.</p>
-            </div>
         </div>
     </div>
 </section>
@@ -254,46 +262,6 @@
                 </ul>
             </div>
         </div>
-        
-        <p class="note fade-in" style="animation-delay: 0.4s;">
-            * No todas las empresas tendrán habilitado el Ticket Alimentación.
-        </p>
-    </div>
-</section>
-
-<!-- RESULTS SECTION -->
-<section class="results-section">
-    <div class="container">
-        <div class="section-header slide-in">
-            <h2>Resultados que hablan por sí solos</h2>
-            <p class="section-subtitle">Nuestros números demuestran el impacto de MiAdelanto</p>
-        </div>
-        
-        <div class="results-grid">
-            <div class="result-card scale-in">
-                <div class="result-number">+250K</div>
-                <p class="result-label">Empleados activos</p>
-                <p class="result-description">Usuarios que ya disfrutan de MiAdelanto</p>
-            </div>
-            
-            <div class="result-card scale-in" style="animation-delay: 0.1s;">
-                <div class="result-number">$5.2B</div>
-                <p class="result-label">En adelantos otorgados</p>
-                <p class="result-description">Capital distribuido a nuestros usuarios</p>
-            </div>
-            
-            <div class="result-card scale-in" style="animation-delay: 0.2s;">
-                <div class="result-number">98%</div>
-                <p class="result-label">Tasa de satisfacción</p>
-                <p class="result-description">Empleados satisfechos con el servicio</p>
-            </div>
-            
-            <div class="result-card scale-in" style="animation-delay: 0.3s;">
-                <div class="result-number">1500+</div>
-                <p class="result-label">Empresas asociadas</p>
-                <p class="result-description">Organizaciones que confían en nosotros</p>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -305,24 +273,22 @@
             <p class="section-subtitle">Está a un mensaje de transformar tu empresa</p>
         </div>
         
-        <div class="contact-grid">
-            <div class="contact-card scale-in">
-                <div class="contact-icon">📞</div>
-                <h3>Teléfono</h3>
-                <a href="tel:24033450" class="contact-link">24033450</a>
-            </div>
-            
-            <div class="contact-card scale-in" style="animation-delay: 0.1s;">
-                <div class="contact-icon">✉️</div>
-                <h3>Email</h3>
-                <a href="mailto:slemez@datamatic.com.uy" class="contact-link">slemez@datamatic.com.uy</a>
-            </div>
-            
-            <div class="contact-card scale-in" style="animation-delay: 0.2s;">
-                <div class="contact-icon">📱</div>
-                <h3>Instagram</h3>
-                <a href="https://instagram.com/mitrabajo" target="_blank" class="contact-link">@mitrabajo</a>
-            </div>
+        <div class="contact-form-container">
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
         </div>
     </div>
 </section>
@@ -336,10 +302,7 @@
 
 <!-- BOTÓN FLOTANTE WHATSAPP -->
 <a href="https://wa.me/59891522876" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 0C7.164 0 0 7.164 0 16c0 2.823.738 5.479 2.031 7.785L0 32l8.441-2.016A15.932 15.932 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#25D366"/>
-        <path d="M25.312 22.807c-.377.938-1.846 1.785-3.035 2.062-.819.187-1.887.338-5.484-1.177-4.625-1.951-7.607-6.639-7.838-6.943-.222-.305-1.846-2.457-1.846-4.686 0-2.229 1.17-3.322 1.585-3.774.415-.453.906-.566 1.209-.566.303 0 .604.004.87.016.279.013.65-.106.998.761.347.867 1.188 2.897 1.292 3.109.104.212.173.458.035.762-.139.304-.208.494-.416.761-.208.267-.437.596-.624.8-.208.228-.424.474-.182.93.242.453.1.904 1.569 2.587 1.884 1.85 3.47 2.43 3.96 2.704.495.274.788.229 1.076-.139.288-.368 1.236-1.442 1.566-1.938.33-.495.66-.413 1.114-.248.454.165 2.887 1.361 3.383 1.609.495.248.825.368.944.577.12.209.12 1.205-.257 2.143z" fill="#fff"/>
-    </svg>
+    <i class="fab fa-whatsapp"></i>
 </a>
 
 </body>

@@ -29,6 +29,11 @@ def img(filename):
 def images(filename):
     return send_from_directory('images', filename)
 
+# Servir archivos desde la raíz (para logo.png, etc)
+@app.route('/<path:filename>')
+def root_files(filename):
+    return send_from_directory('.', filename)
+
 # API endpoints de ejemplo para futuras funcionalidades
 @app.route('/api/health')
 def health():
