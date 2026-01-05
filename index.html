@@ -43,13 +43,14 @@
 <section class="hero">
     <svg class="wave-header" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
-                <stop offset="50%" style="stop-color:#00a8e8;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:1" />
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#08418b;stop-opacity:1" />
+                <stop offset="30%" style="stop-color:#3a75ff;stop-opacity:1" />
+                <stop offset="70%" style="stop-color:#b8d4ff;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#f5f9ff;stop-opacity:1" />
             </linearGradient>
         </defs>
-        <path d="M0,40 Q300,15 600,40 T1200,40 L1200,0 L0,0 Z" fill="url(#waveGradient)"/>
+        <path d="M0,60 Q300,20 600,60 T1200,60 L1200,120 L0,120 Z" fill="url(#waveGradient)"/>
     </svg>
     <div class="container">
         <div class="hero-grid">
@@ -239,17 +240,14 @@
         
         <div class="modalities-grid">
             <div class="modality-card scale-in">
-                <div class="icon">💰</div>
-                <h3>Adelanto en cuenta</h3>
+                <h3>Elige donde recibir tu adelanto</h3>
                 <p>
-                    El empleado recibe la plata directamente en su cuenta bancaria,
-                    como un adelanto de sueldo común, sin beneficios adicionales.
+                    El funcionario recibe el dinero directamente en su cuenta bancaria
+                    o a través de su tarjeta Sodexo.
                 </p>
             </div>
             
             <div class="modality-card featured scale-in" style="animation-delay: 0.2s;">
-                <div class="badge pulse">⭐ Destacado</div>
-                <div class="icon">🍽️</div>
                 <h3>Ticket Alimentación</h3>
                 <p>
                     Modalidad con beneficios fiscales, disponible solo para empresas
@@ -268,27 +266,28 @@
 <!-- CONTACTO SECTION -->
 <section id="empleados" class="contact-section">
     <div class="container">
-        <div class="section-header slide-in">
-            <h2>Contacto</h2>
-            <p class="section-subtitle">Está a un mensaje de transformar tu empresa</p>
-        </div>
-        
-        <div class="contact-form-container">
-            <form class="contact-form" action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
+        <div class="contact-wrapper">
+            <div class="contact-content">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de cualquiera de estos canales.</p>
+                
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <h3>Teléfono</h3>
+                        <a href="tel:24033450" class="contact-link">2403 34 50</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3>Email</h3>
+                        <a href="mailto:info@miadelanto.com" class="contact-link">info@miadelanto.com</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/59824033450" target="_blank" class="contact-link">+598 2403 3450</a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Teléfono</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <button type="submit" class="btn-submit">Enviar</button>
-            </form>
+            </div>
         </div>
     </div>
 </section>
@@ -301,7 +300,7 @@
 </footer>
 
 <!-- BOTÓN FLOTANTE WHATSAPP -->
-<a href="https://wa.me/59891522876" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+<a href="https://wa.me/59824033450" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
